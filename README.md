@@ -64,9 +64,9 @@ KrishiAI/
 
 ## 📸 Screenshots
 
-| Home Page | Crop Recommendation | Disease Detection |
+| Home Page | Crop Recommendation | Plant Disease Detection |
 |-----------|----------------------|--------------------|
-| ![Home Page](screenshots/homepage.png) | ![Crop Recommendation](screenshots/crop_recommendation.png) | ![Plant Disease Detection](screenshots/plant_disease_detection.png) |
+| ![Home Page](screenshots/homepage) | ![Crop Recommendation](screenshots/crop_recommendation) | ![Plant Disease Detection](screenshots/plant_disease_detection) |
 
 
 
