@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container glass-card">
+        <h1>🌱 Recommended Crop</h1>
+        <p>The best crop for the given soil and climate conditions is:</p>
+
+        {% if crop_result and 'Error' not in crop_result %}
+            <div class="result success">
+                🌾 <strong>{{ crop_result }}</strong>
+            </div>
+        {% else %}
+            <div class="result error">
+                ❌ {{ crop_result or 'Unable to predict the crop. Please try again.' }}
+            </div>
+        {% endif %}
+
+        <div class="home-links">
+            <a href="{{ url_for('index') }}">⬅️ Back to Home</a> |
+            <a href="{{ url_for('crop_form') }}">🔁 Try Again</a>
+        </div>
+    </div>
+</body>
+</html>

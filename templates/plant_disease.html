@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🦠 Plant Disease Detection</h1>
+        <form action="{{ url_for('disease_form') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Detect Disease</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            🧪 Detection Result: <strong>{{ prediction }}</strong>
+        </div>
+        {% endif %}
+
+        {% if image_file %}
+        <img src="{{ url_for('static', filename='uploads/' + image_file.split('/')[-1]) }}" alt="Uploaded Leaf" class="preview">
+        {% endif %}
+
+        <div class="home-links">
+            <a href="{{ url_for('index') }}">🏠 Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 KrishiAI
+    </footer>
+</body>
+</html>

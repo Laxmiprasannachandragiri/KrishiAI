@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KrishiAI - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Welcome to KrishiAI</h1>
+        <h2>AI-powered Crop & Plant Health Assistant</h2>
+
+        <div class="home-links">
+            <a href="{{ url_for('crop_form') }}">🚜 Crop Recommendation</a>
+            <a href="{{ url_for('disease_form') }}">🦠 Plant Disease Detection</a>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 KrishiAI | Developed with 💡 in India
+    </footer>
+</body>
+</html>

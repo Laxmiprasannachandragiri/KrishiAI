@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚜 Crop Recommendation</h1>
+        <form action="{{ url_for('crop_form') }}" method="POST">
+            <input type="number" name="nitrogen" placeholder="Nitrogen (N)" required>
+            <input type="number" name="phosphorus" placeholder="Phosphorus (P)" required>
+            <input type="number" name="potassium" placeholder="Potassium (K)" required>
+            <input type="number" name="temperature" placeholder="Temperature (°C)" step="0.1" required>
+            <input type="number" name="humidity" placeholder="Humidity (%)" step="0.1" required>
+            <input type="number" name="ph" placeholder="pH Level" step="0.1" required>
+            <input type="number" name="rainfall" placeholder="Rainfall (mm)" step="0.1" required>
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            🌾 Recommended Crop: <strong>{{ result }}</strong>
+        </div>
+        {% endif %}
+
+        <div class="home-links">
+            <a href="{{ url_for('index') }}">🏠 Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 KrishiAI
+    </footer>
+</body>
+</html>
