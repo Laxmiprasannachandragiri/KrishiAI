@@ -1,9 +1,9 @@
+# Ignore virtual environments and large files
 venv/
 __pycache__/
 *.h5
 *.pkl
-.DS_Store
-*.pyc
 *.pyd
 *.dll
 *.log
+.DS_Store
