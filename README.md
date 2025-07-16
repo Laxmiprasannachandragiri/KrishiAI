@@ -66,7 +66,7 @@ KrishiAI/
 
 | Home Page | Crop Form | Disease Detection |
 |-----------|-----------|-------------------|
-| ![Home](screenshots/homepage.png) | ![Crop](screenshots/crop_recommendation.png) | ![Disease](screenshots/plant_disease_detection.png) |
+| ![Home Page](screenshots/homepage.png) | ![Crop Recommendation](screenshots/crop_recommendation.png) | ![Plant Disease Detection](screenshots/plant_disease_detection.png) |
 
 ---
 
