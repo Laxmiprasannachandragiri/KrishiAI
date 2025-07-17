@@ -62,14 +62,6 @@ KrishiAI/
 
 ---
 
-## 📸 Screenshots
-
-| Home Page | Crop Recommendation | Plant Disease Detection |
-|-----------|----------------------|--------------------|
-| ![Home Page](screenshots/homepage) | ![Crop Recommendation](screenshots/crop_recommendation) | ![Plant Disease Detection](screenshots/plant_disease_detection) |
-
-
-
 ## ⚠️ Notes
 
 - **The `plant_disease_model.h5` file exceeds GitHub’s 100MB file limit**.  
