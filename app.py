@@ -3,7 +3,7 @@ import os
 import numpy as np
 import joblib
 import tensorflow as tf
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing import image
 from werkzeug.utils import secure_filename
 import uuid
 
