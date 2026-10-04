@@ -13,7 +13,18 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 crop_model = joblib.load("models/crop_model.pkl")
-disease_model = tf.keras.models.load_model("models/plant_disease_model.h5")
+#disease_model = tf.keras.models.load_model("models/plant_disease_model.h5")
+disease_model_path = "models/plant_disease_model.h5"
+
+disease_model = None
+
+if os.path.exists(disease_model_path):
+    disease_model = tf.keras.models.load_model(disease_model_path)
+else:
+    print("Warning: Plant disease model not found. Disease detection is unavailable.")
+
+
+
 
 class_labels = [
     'Tomato___Bacterial_spot', 'Tomato___Early_blight', 'Tomato___Late_blight',
